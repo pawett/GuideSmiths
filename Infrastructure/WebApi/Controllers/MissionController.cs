@@ -1,13 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Http;
-using MartianRobots.Application;
+﻿using MartianRobots.Application;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace WebApi.Controllers
 {
