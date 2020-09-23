@@ -19,12 +19,11 @@ namespace MartianRobots.Domain
         {
 
             if (position.X >= LowerLeft.X && position.X <= UpperRight.X
-            && position.Y >= LowerLeft.Y && position.Y <= UpperRight.Y)
+                && position.Y >= LowerLeft.Y && position.Y <= UpperRight.Y)
             {
                 return true;
             }
                
-
             return false;
         }
 

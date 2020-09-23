@@ -1,7 +1,5 @@
 namespace MartianRobots.Domain
 {
-
-
     public class RightRotationCommand : IRobotMovementCommand
     {
         private Robot _robot;
@@ -13,6 +11,7 @@ namespace MartianRobots.Domain
         public Robot Execute()
         {
             _robot.RotateRight();
+
             return _robot;
         }
     }

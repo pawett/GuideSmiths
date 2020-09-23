@@ -2,7 +2,7 @@ namespace MartianRobots.Domain
 {
     public enum Orientation
     {
-      N,S,E,W  
+        N,S,E,W  
     }
 
     public class Position
@@ -16,7 +16,7 @@ namespace MartianRobots.Domain
             Orientation = orientation;
         }
 
-        public void SetOrientation(Orientation orientation)
+        internal void SetOrientation(Orientation orientation)
         {
             Orientation = orientation;
         }

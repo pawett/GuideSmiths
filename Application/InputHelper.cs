@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using MartianRobots.Domain;
 
 namespace MartianRobots.Application
@@ -14,8 +13,7 @@ namespace MartianRobots.Application
             }
         }
         public static InputData ReadInputData(string data)
-        {
-            
+        {     
             var lines = data.Split('\n');
 
             var upperRightCoordinate = lines[0].Split(' ');
@@ -32,13 +30,13 @@ namespace MartianRobots.Application
             {
                 var robotInstructions = new RobotInstructions();
                 var position = lines[i].Split(' ');
-                var x = int.Parse(position[0]);
-                var y = int.Parse(position[1]);
+                var x = int.Parse(position[0].Trim());
+                var y = int.Parse(position[1].Trim());
 
                 CheckCoordinateConstraints(x);
                 CheckCoordinateConstraints(y);
 
-                var orientation = (Orientation)Enum.Parse(typeof(Orientation), position[2]);
+                var orientation = (Orientation)Enum.Parse(typeof(Orientation), position[2].Trim());
                 var robot = new Robot(new Position(x, y, orientation));
                 robotInstructions.Robot = robot;
                 i++;

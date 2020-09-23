@@ -11,6 +11,7 @@ namespace MartianRobots.Domain
         public Robot Execute()
         {
             _robot.RotateLeft();
+
             return _robot;
         }
     }

@@ -42,7 +42,6 @@ namespace MartianRobots.Domain
                 _robot.SetLostStatus();
             }
 
-
             return _robot;
         }
     }

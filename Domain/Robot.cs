@@ -1,7 +1,8 @@
 using System;
 namespace MartianRobots.Domain
 {
-    public enum RobotStatus{
+    public enum RobotStatus
+    {
        Lost,
        Ok
     }
@@ -10,10 +11,11 @@ namespace MartianRobots.Domain
         public Robot(Position position)
         {
             Position = position;
+            Status = RobotStatus.Ok;
         }
 
         public Position Position {get; private set;}
-        public RobotStatus Status {get; private set;} = RobotStatus.Ok;  
+        public RobotStatus Status {get; private set;}  
 
         public void SetPosition(int x, int y)
         {
