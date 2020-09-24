@@ -25,6 +25,20 @@ FRRFLLFFRRFLL"));
 FRRFLLFFRRFLLFRRFLLFFRRFLLFRRFLLFFRRFLLFRRFLLFFRRFLLFRRFLLFFRRFLLFRRFLLFFRRFLLFRRFLLFFRRFLLRRRLLLFFFFFFFF"));
         }
 
+        [Fact]
+        public void WhenRobotMovesOnTheGridTheEndPositionIsCorrect()
+        {
+            var instructions = InputHelper.ReadInputData(@"5 3
+1 1 E
+RFRFRFRF");
+            MissionControlService service = new MissionControlService(instructions.UpperRightCoordinate);
+
+            var results = service.ExecuteMission(instructions.RobotInstructions);
+            Assert.Equal(RobotStatus.Ok, results.First().Status);
+            Assert.Equal(1, results.First().Position.Coordinates.X);
+            Assert.Equal(1, results.First().Position.Coordinates.Y);
+            Assert.Equal(Orientation.E, results.First().Position.Orientation);
+        }
 
         [Fact]
         public void WhenRobotMovesOffTheGridItsStatusIsLost()
