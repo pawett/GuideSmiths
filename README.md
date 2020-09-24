@@ -1,4 +1,4 @@
-# GuideSmith Code Challenge
+# GuideSmiths Code Challenge
 This repository stores my solution to the [GuideSmith code challenge.](https://github.com/guidesmiths/interview-code-challenges/blob/master/.NET/martian-robots/instructions.md)
 
 The language used is C# and the framework is .NET Core 3.1.
